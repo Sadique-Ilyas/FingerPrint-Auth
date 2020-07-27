@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/login_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Use Fingerprint to Login"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textSize="30sp"
+        android:textStyle="bold|italic" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_heading"
+        android:layout_alignStart="@id/login_heading"
+        android:layout_alignLeft="@id/login_heading"
+        android:layout_alignEnd="@id/login_heading"
+        android:layout_alignRight="@id/login_heading"
+        android:layout_centerInParent="true"
+        android:text="LOGIN"
+        android:textSize="20sp" />
+
+</RelativeLayout>
