@@ -1,5 +1,6 @@
 package com.example.myfingerprintauthapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
@@ -63,13 +64,15 @@ class MainActivity : AppCompatActivity() {
                             applicationContext,
                             "Authentication succeeded!", Toast.LENGTH_SHORT
                         ).show()
+                        startActivity(Intent(this@MainActivity, HomeActivity::class.java))
                     }
                 })
 
         val promptInfo = androidx.biometric.BiometricPrompt.PromptInfo.Builder()
             .setTitle("Fingerprint Authentication")
-            .setSubtitle("Login using fingerprint. Place your finger on Fingerprint Scanner")
-            .setNegativeButtonText("Cancel")
+            .setSubtitle("Login using fingerprint")
+            .setDescription("Place your finger on Fingerprint Scanner")
+            .setDeviceCredentialAllowed(true)
             .build()
 
         val loginButton: Button = findViewById(R.id.loginButton)
